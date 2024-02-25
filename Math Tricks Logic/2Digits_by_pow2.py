@@ -16,8 +16,10 @@
 # print(78 * 78)
 # ----------------------------------------------------------------------------
 
+# module import to access the time.sleep function
 import time
 
+# Two ansii codes to clear the screen and return to the prompt
 CLEAR = "\033[2J"
 CLEAR_AND_RETURN = "\033[H"
 
@@ -29,8 +31,8 @@ while True:
     )
     if choice == "1":
 
-        # list to store the final result digits:
-        list_f_result = []
+        # list of strings to store the final result digits:
+        list_f_result: list[str] = []
 
         user_input = input("\nPlease enter a number > 9 and < 100: --> ")
         x = int(user_input[0])
@@ -56,9 +58,9 @@ while True:
             calc_second_digit = ((x * y) * 2) + to_add
             second_digit = str(calc_second_digit)
 
-        second_digit_is_3digits = len(second_digit) == 3
-        second_digit_is_2digits = len(second_digit) == 2
-        second_digit_is_1digit = len(second_digit) == 1
+        second_digit_is_3digits: str = len(second_digit) == 3
+        second_digit_is_2digits: str = len(second_digit) == 2
+        second_digit_is_1digit: str = len(second_digit) == 1
 
         if second_digit_is_3digits:
             list_f_result.insert(0, second_digit[2])  # 2c.
