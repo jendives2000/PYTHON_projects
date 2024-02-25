@@ -86,7 +86,11 @@ while True:
 
         print(CLEAR, CLEAR_AND_RETURN)
         print(f"\n{user_input}² = {f_result}")
+        time.sleep(1.5)
 
     if choice == "2":
+        print(CLEAR, CLEAR_AND_RETURN)
         print("\nProgram ended.\n\n")
+        time.sleep(2)
+        print(CLEAR, CLEAR_AND_RETURN)
         quit()
