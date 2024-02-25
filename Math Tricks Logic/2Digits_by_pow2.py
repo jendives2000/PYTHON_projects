@@ -16,10 +16,12 @@
 # print(78 * 78)
 # ----------------------------------------------------------------------------
 
+import time
+
 # while loop to keep the program running until the user exits it
 while True:
     choice = input(
-        "\n1. Calculate a 2 digits number > 0 and < 100.\n2. Exit the program.\nPlease enter your choice (1 or 2) --> "
+        "\n1. Calculate the ² of a 2 digits number > 0 and < 100.\n2. Exit the program.\nPlease enter your choice (1 or 2) --> "
     )
     if choice == "1":
 
@@ -30,7 +32,10 @@ while True:
         x = int(user_input[0])
         y = int(user_input[1])
         # to verify the calculation:
-        print(int(user_input) * int(user_input))
+        # print(int(user_input) * int(user_input))
+
+        print(f"\ncalculating: {user_input}²")
+        time.sleep(1)
 
         last_digit = str(y * y)  # 1.
 
@@ -74,7 +79,7 @@ while True:
             list_f_result.insert(0, first_digit)  # 3c.
 
         f_result = list_f_result[0] + list_f_result[1] + list_f_result[2]
-        print(f"\n{f_result}")
+        print(f"\n{user_input}² = {f_result}")
 
     if choice == "2":
         print("\nProgram ended.\n\n")
