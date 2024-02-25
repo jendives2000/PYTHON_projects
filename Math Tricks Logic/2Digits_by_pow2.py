@@ -18,10 +18,14 @@
 
 import time
 
+CLEAR = "\033[2J"
+CLEAR_AND_RETURN = "\033[H"
+
+
 # while loop to keep the program running until the user exits it
 while True:
     choice = input(
-        "\n1. Calculate the ² of a 2 digits number > 0 and < 100.\n2. Exit the program.\nPlease enter your choice (1 or 2) --> "
+        "\n1. Calculate the ² of a 2 digits number > 9 and < 100.\n2. Exit the program.\nPlease enter your choice (1 or 2) --> "
     )
     if choice == "1":
 
@@ -79,6 +83,8 @@ while True:
             list_f_result.insert(0, first_digit)  # 3c.
 
         f_result = list_f_result[0] + list_f_result[1] + list_f_result[2]
+
+        print(CLEAR, CLEAR_AND_RETURN)
         print(f"\n{user_input}² = {f_result}")
 
     if choice == "2":
